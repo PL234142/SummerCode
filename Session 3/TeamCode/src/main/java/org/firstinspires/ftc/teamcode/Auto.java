@@ -91,6 +91,22 @@ public class Auto extends LinearOpMode {
     public void editHere() {
 
     }
+    
+    public void enable_flywheel() {
+        robot.flywheel.setPower(0);
+        robot.flywheel.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        robot.flywheel.setPower(0.8);
+    }
+    
+    public void disable_flywheel() {
+        robot.flywheel.setPower(0);
+    }
+    
+    public void kick_three() {
+        robot.kicker.setPower(-0.25);
+        sleep(2000);
+        robot.kicker.setPower(0);
+    }
 
     public void drive (int rightFront, int leftFront, int rightRear, int leftRear, double power, int timeOut) {
         robot.rightFront.setPower(0);
