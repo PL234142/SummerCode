@@ -96,6 +96,7 @@ public class Auto extends LinearOpMode {
         robot.flywheel.setPower(0);
         robot.flywheel.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         robot.flywheel.setPower(0.8);
+        sleep(3000);
     }
     
     public void disable_flywheel() {
